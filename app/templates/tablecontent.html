@@ -1,0 +1,30 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+    <h1>Contenido de la Tabla</h1>
+
+    <!-- Botón para cerrar sesión -->
+    <a href="{{ url_for('logout') }}" class="btn btn-danger">Cerrar sesión</a>
+
+    <!-- Tabla de contenido -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+                <tr>
+                    <td>{{ usuario.id }}</td>
+                    <td>{{ usuario.nombre }}</td>
+                    <td>{{ usuario.apellido }}</td>
+                    <td>{{ usuario.email }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
