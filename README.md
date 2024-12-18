@@ -1,4 +1,4 @@
-﻿# Flask-Gesti-n-Users
+﻿# Flask-Gestion-Users
 
 Para ejecutar se necesita estar en el directorio raiz del programa:
 
